@@ -7,6 +7,8 @@ The Self-care 360 app is designed to address this challenge by providing users w
 
 This is centered on problem, No maintanance and Medical care.
 
+Note: This Application is still under developement
+
 
 ## Getting Started
 
