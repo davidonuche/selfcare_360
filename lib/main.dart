@@ -1,6 +1,14 @@
-import 'package:flutter/material.dart';
+// Project Name: Self_Care_360 - Microsoft Learn Student Ambassadors Hackathon 2023
+// Start Date: 25th Mar, 2023
+// End Date: 30th Mar, 2023
+// Android app live date: ----
+// iOS app live date: ----
+// Team Members: David O. x David O.
 
+import 'package:flutter/material.dart';
 import 'auth/onboarding_screen.dart';
+
+
 
 void main() => runApp(MyApp());
 

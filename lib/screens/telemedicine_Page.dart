@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-
+import 'package:intl/intl.dart';
+import 'package:selfcare_360/utils/colors.dart';
 
 class TelemedicinePage extends StatefulWidget {
   @override
@@ -46,9 +46,12 @@ class _TelemedicinePageState extends State<TelemedicinePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColor.klightgray,
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: Text('Telemedicine'),
+        title: Center(
+            child: Text('Telemedicine',
+                style: TextStyle(color: AppColor.kdarkblue))),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -68,13 +71,13 @@ class _TelemedicinePageState extends State<TelemedicinePage> {
                     'Date:',
                     style: TextStyle(fontSize: 16.0),
                   ),
-                  // TextButton(
-                  //   onPressed: () => _selectDate(context),
-                  // child: Text(
-                  // DateFormat('EEEE, MMM d').format(_selectedDate),
-                  // style: TextStyle(fontSize: 16.0),
-                  // ),
-                  // ),
+                  TextButton(
+                    onPressed: () => _selectDate(context),
+                    child: Text(
+                      DateFormat('EEEE, MMM d').format(_selectedDate),
+                      style: TextStyle(fontSize: 16.0, color: AppColor.kgreen),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: 16.0),
@@ -89,17 +92,24 @@ class _TelemedicinePageState extends State<TelemedicinePage> {
                     onPressed: () => _selectTime(context),
                     child: Text(
                       _selectedTime.format(context),
-                      style: TextStyle(fontSize: 16.0),
+                      style: TextStyle(fontSize: 16.0, color: AppColor.kgreen),
                     ),
                   ),
                 ],
               ),
               SizedBox(height: 16.0),
               ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(AppColor.kwhite),
+                ),
                 onPressed: () {
                   // Code to schedule appointment goes here
                 },
-                child: Text('Schedule Appointment'),
+                child: Text(
+                  'Schedule Appointment',
+                  style: TextStyle(color: AppColor.kgreen),
+                ),
               ),
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selfcare_360/utils/colors.dart';
 
 class SymptomTrackerScreen extends StatefulWidget {
   @override
@@ -6,7 +7,7 @@ class SymptomTrackerScreen extends StatefulWidget {
 }
 
 class _SymptomTrackerScreenState extends State<SymptomTrackerScreen> {
-  String _symptom = '';
+ String _symptom = '';
   int _severity = 0;
 
   final _formKey = GlobalKey<FormState>();
@@ -15,9 +16,13 @@ class _SymptomTrackerScreenState extends State<SymptomTrackerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColor.klightgray,
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: Text('Symptom Tracker'),
+        title: Center(
+          child: Text('Symptom Tracker',
+              style: TextStyle(color: AppColor.kdarkblue)),
+        ),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -38,13 +43,13 @@ class _SymptomTrackerScreenState extends State<SymptomTrackerScreen> {
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                  //   if (value.isEmpty) {
-                  //     return 'Please enter your symptom';
-                  //   }
-                  //   return null;
-                  // },
-                  // onSaved: (value) {
-                  //   _symptom = value;
+                    if (value!.isEmpty) {
+                      return 'Please enter your symptom';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _symptom = value!;
                   },
                 ),
                 SizedBox(height: 16.0),
@@ -82,15 +87,20 @@ class _SymptomTrackerScreenState extends State<SymptomTrackerScreen> {
                   ],
                 ),
                 SizedBox(height: 16.0),
-                // RaisedButton(
-                //   child: Text('Submit'),
-                //   onPressed: () {
-                //     if (_formKey.currentState.validate()) {
-                //       _formKey.currentState.save();
-                //       // Save the symptom and severity data to a database or file.
-                //     }
-                //   },
-                // ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(AppColor.kwhite),
+                  ),
+                  child:
+                      Text('Submit', style: TextStyle(color: AppColor.kgreen)),
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      _formKey.currentState!.save();
+                      // Save the symptom and severity data to a database or file.
+                    }
+                  },
+                ),
               ],
             ),
           ),

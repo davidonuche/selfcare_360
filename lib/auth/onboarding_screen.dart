@@ -51,7 +51,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           subtitle[index],
           style: TextStyle(
             fontSize: 18,
-            color: AppColor.kgreen,
+            color: AppColor.kdarkblue,
           ),
           textAlign: TextAlign.center,
         ),
@@ -110,7 +110,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ),
         ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColor.kgreen),
+            backgroundColor: MaterialStateProperty.all(AppColor.klightgray),
           ),
           onPressed: _currentPageIndex == title.length - 1
               ? () {

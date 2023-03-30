@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selfcare_360/utils/colors.dart';
 
 class HealthTrackingScreeen extends StatefulWidget {
   @override
@@ -14,9 +15,12 @@ class _HealthTrackingScreeenState extends State<HealthTrackingScreeen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColor.klightgray,
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: Text('Health Tracking'),
+        title: Center(
+            child: Text('Health Tracking',
+                style: TextStyle(color: AppColor.kdarkblue))),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -43,6 +47,8 @@ class _HealthTrackingScreeenState extends State<HealthTrackingScreeen> {
             ),
             SizedBox(height: 8.0),
             Slider(
+              activeColor: AppColor.kgreen,
+              inactiveColor: AppColor.klightblue,
               value: _waterIntake.toDouble(),
               min: 0,
               max: 10,
@@ -70,6 +76,8 @@ class _HealthTrackingScreeenState extends State<HealthTrackingScreeen> {
             ),
             SizedBox(height: 8.0),
             Slider(
+              activeColor: AppColor.kgreen,
+              inactiveColor: AppColor.klightblue,
               value: _caloriesIntake.toDouble(),
               min: 0,
               max: 5000,
@@ -97,6 +105,8 @@ class _HealthTrackingScreeenState extends State<HealthTrackingScreeen> {
             ),
             SizedBox(height: 8.0),
             Slider(
+              activeColor: AppColor.kgreen,
+              inactiveColor: AppColor.klightblue,
               value: _exerciseDuration.toDouble(),
               min: 0,
               max: 120,

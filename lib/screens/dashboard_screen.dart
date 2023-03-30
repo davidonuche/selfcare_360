@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selfcare_360/utils/colors.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override
@@ -7,7 +8,12 @@ class DashboardScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: Text('Dashboard'),
+        backgroundColor: AppColor.klightgray,
+        title: Center(
+            child: Text(
+          'Dashboard',
+          style: TextStyle(color: AppColor.kdarkblue),
+        )),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,7 +65,7 @@ class DashboardScreen extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.0),
-        color: Colors.blueAccent,
+        color: AppColor.klightgray,
       ),
       padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
       child: Column(
@@ -67,7 +73,7 @@ class DashboardScreen extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: AppColor.kdarkblue),
           ),
           SizedBox(height: 8.0),
           Text(
@@ -75,7 +81,7 @@ class DashboardScreen extends StatelessWidget {
             style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: AppColor.kdarkblue,
             ),
           ),
         ],

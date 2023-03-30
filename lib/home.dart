@@ -7,7 +7,6 @@ import 'screens/symptom_tracker_screen.dart';
 import 'screens/telemedicine_Page.dart';
 import 'utils/colors.dart';
 
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -50,7 +49,7 @@ class _HomeState extends State<Home> {
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.art_track),
-            label: 'Health',
+            label: 'Tracker',
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.track_changes_rounded),

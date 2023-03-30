@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selfcare_360/utils/colors.dart';
 
 class SettingsScreen extends StatefulWidget {
   @override
@@ -14,9 +15,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColor.klightgray,
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: Text('Settings'),
+        title: Center(
+            child:
+                Text('Settings', style: TextStyle(color: AppColor.kdarkblue))),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -29,6 +33,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 style: TextStyle(fontSize: 20.0),
               ),
               SwitchListTile(
+                activeColor: AppColor.kgreen,
+                activeTrackColor: AppColor.klightgray,
                 title: Text('Enable notifications'),
                 value: _notificationsEnabled,
                 onChanged: (value) {
@@ -43,6 +49,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 style: TextStyle(fontSize: 20.0),
               ),
               SwitchListTile(
+                activeColor: AppColor.kgreen,
+                activeTrackColor: AppColor.klightgray,
                 title: Text('Enable dark mode'),
                 value: _darkModeEnabled,
                 onChanged: (value) {
@@ -65,6 +73,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     style: TextStyle(fontSize: 14.0),
                   ),
                   Slider(
+                    activeColor: AppColor.kgreen,
+                    inactiveColor: AppColor.klightgray,
                     value: _fontSize.toDouble(),
                     min: 12.0,
                     max: 24.0,

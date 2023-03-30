@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selfcare_360/utils/colors.dart';
 
 class MentalHealthResourcesPage extends StatelessWidget {
   @override
@@ -7,7 +8,11 @@ class MentalHealthResourcesPage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: Text('Mental Health Resources'),
+        backgroundColor: AppColor.klightgray,
+        title: Center(
+          child: Text('Mental Health Resources',
+              style: TextStyle(color: AppColor.kdarkblue)),
+        ),
       ),
       body: Column(
         children: [
@@ -18,7 +23,12 @@ class MentalHealthResourcesPage extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Search for mental health resources',
                 prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: AppColor.kgreen),
+                  borderRadius: BorderRadius.circular(
+                    10.0,
+                  ),
+                ),
               ),
             ),
           ),
@@ -39,7 +49,7 @@ class MentalHealthResourcesPage extends StatelessWidget {
               ),
               DropdownButton<String>(
                 hint: Text('Location'),
-                items: <String>['USA', 'Canada', 'UK', 'Australia']
+                items: <String>['Nigeria', 'Canada', 'UK', 'Kuwait']
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
