@@ -3,7 +3,7 @@
 // End Date: 30th Mar, 2023
 // Android app live date: ----
 // iOS app live date: ----
-// Team Members: David O. x David O.
+// Team Members: David O. x Ridwan A.
 
 import 'package:flutter/material.dart';
 import 'auth/onboarding_screen.dart';
