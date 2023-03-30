@@ -1,16 +1,47 @@
-# selfcare_360
+<h1 align="center">Welcome to SelfCare_360</h1>
 
-A new Flutter project.
+About.
+
+Self-care is an essential component of Maintaining physical and mental health. However, with busy schedules, lack of resources, and limited access to medical professionals, it can be challenging to prioritize self-care. 
+The Self-care 360 app is designed to address this challenge by providing users with a comprehensive and accessible self-care solution.
+
+This is centered on problem, No maintanance and Medical care.
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started, you need to have Flutter installed on your machine. You can find the installation instructions [here](https://flutter.dev/docs/get-started/install).
 
-A few resources to get you started if this is your first Flutter project:
+Install requirements
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```shell
+flutter pub get
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
+Run app
+
+```shell
+flutter run
+```
+
+Build apk for Android
+
+```shell
+flutter build apk --target-platform android-arm, android-arm64
+```
+
+Build App Bundle
+
+```shell
+flutter build appbundle
+```
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## License
+
+[MIT](LICENSE) © SelfCare Squad Team
+
+
